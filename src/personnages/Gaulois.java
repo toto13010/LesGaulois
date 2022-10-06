@@ -1,14 +1,13 @@
-package package personnages;
+package personnages;
 
 public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
 
-	public Gaulois(String nom, int force, int effetPotion) {
+	public Gaulois(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
-		this.effetPotion = effetPotion;
 	}
 
 	public String getNom() {
@@ -16,11 +15,11 @@ public class Gaulois {
 	}
 
 	public void parler(String texte) {
-		System.out.println(prndreParole() + "'" + texte + "'");
+		System.out.println(prndreParole() + "' " + texte + " '");
 	}
 
 	private String prndreParole() {
-		return "le gaulois" + nom + ":";
+		return "le gaulois " + nom + ":";
 	}
 
 	public void frapper(Romain romain) {
@@ -34,7 +33,12 @@ public class Gaulois {
 	}
 
 	public static void main(String[] args) {
-
+		Gaulois asterix = new Gaulois("Asterix",8);
+		System.out.println(asterix);
+		System.out.println(asterix.prndreParole());
+		asterix.parler("hola");
+		Romain brutus = new Romain("Brutus",1);
+		asterix.frapper(brutus);
 	}
 
 }

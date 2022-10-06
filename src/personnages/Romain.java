@@ -21,12 +21,12 @@ public class Romain {
 		return "le romain" + nom + ":";
 	}
 
-	private void recevoirCoup(int forceCoup) {
+	public void recevoirCoup(int forceCoup) {
 		force-=forceCoup;
 		if (force>0) {
-			parler("Aie")
+			parler("Aie");
 		} else {
-			parler("J'abandonne...")
+			parler("J'abandonne...");
 
 		}
 	}
